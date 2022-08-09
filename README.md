@@ -1,4 +1,5 @@
-
+## Main structure of the Movie App:
+![./imgs/structure.png](./imgs/structure.png)
 
 ## Browser API
 
