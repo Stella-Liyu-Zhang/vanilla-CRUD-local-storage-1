@@ -64,10 +64,11 @@ let acceptData = () => {
 
 //use the "Data" object inside here
 let createTasks = () => {
+    tasks.innerHTML = "";
+
     //y: 0, 1,2,3,4,5,6, attached to the id number 
     //x: individually target all the objects one by one
     data.map((x,y) => {
-        tasks.innerHTML = "";
         return (
             tasks.innerHTML += `
             <div id=${y}>
