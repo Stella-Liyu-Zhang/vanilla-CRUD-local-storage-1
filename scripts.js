@@ -9,6 +9,14 @@ let textArea = document.getElementById("textArea");
 let tasks = document.getElementById("tasks");
 let add = document.getElementById("add");
 
+//opens the form
+function openForm() {
+    document.getElementById("form").style.display = "block";
+}
+//close the form
+function closeForm() {
+    document.getElementById("form").style.display = "none";
+  }
 //when the user is submitting the form
 //prevent not to refresh automatically!
 form.addEventListener("submit", (e) =>{
@@ -85,6 +93,7 @@ let createTasks = () => {
     })
 
     resetForm();
+    closeForm();
 }
 
 let deleteTask = (e) =>{
@@ -103,7 +112,6 @@ let editTask = (e) =>{
     directorInput.value = selectedTask.children[2].innerHTML;
     textArea.value = selectedTask.children[3].innerHTML;
 
-    deleteTask(e);
 }
 
 let resetForm = () =>{
