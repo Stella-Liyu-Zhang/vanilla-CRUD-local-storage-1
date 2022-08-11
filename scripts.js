@@ -85,7 +85,7 @@ let createTasks = () => {
                 <p>${x.director}</p>
                 <p>${x.description}</p>
                 <span class="options">
-                    <i onClick = "editTask(this)" class="fas fa-edit" data-bs-toggle="modal" data-bs-target="#form"></i>
+                    <i onClick = "editTask(this)" class="fas fa-edit" ></i>
                     <i onClick = "deleteTask(this); createTasks()" class="fas fa-trash-alt"></i>
                 </span>
             </div>`
@@ -105,6 +105,7 @@ let deleteTask = (e) =>{
 };
 
 let editTask = (e) =>{
+    openForm();
     let selectedTask = e.parentElement.parentElement;
 
     movieInput.value = selectedTask.children[0].innerHTML ;
@@ -112,6 +113,7 @@ let editTask = (e) =>{
     directorInput.value = selectedTask.children[2].innerHTML;
     textArea.value = selectedTask.children[3].innerHTML;
 
+    e.parentElement.parentElement.remove();
 }
 
 let resetForm = () =>{
