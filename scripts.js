@@ -8,10 +8,11 @@ let dateInput = document.getElementById("dateInput");
 let textArea = document.getElementById("textArea");
 let tasks = document.getElementById("tasks");
 let add = document.getElementById("add");
+let dialog = document.querySelector("dialog");
 
 //opens the form
-function openForm() {
-    document.getElementById("form").style.display = "block";
+function openDialog() {
+    dialog.setAttribute('open', true);
 }
 //close the form
 function closeForm() {
@@ -105,7 +106,8 @@ let deleteTask = (e) =>{
 };
 
 let editTask = (e) =>{
-    openForm();
+    openDialog();
+    let recordID = e.target.getAttribute('data-record-id');
     let selectedTask = e.parentElement.parentElement;
 
     movieInput.value = selectedTask.children[0].innerHTML ;
@@ -113,7 +115,6 @@ let editTask = (e) =>{
     directorInput.value = selectedTask.children[2].innerHTML;
     textArea.value = selectedTask.children[3].innerHTML;
 
-    e.parentElement.parentElement.remove();
 }
 
 let resetForm = () =>{

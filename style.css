@@ -14,11 +14,16 @@ body{
 dialog {
     background-color: rgba(0,0,0,0.5);
     border: none;
-    display: grid;
+    display: none;  
     place-items: center;
     height: 100%;
     width: 100%;
 }
+
+dialog[open] {
+    display: grid;
+}
+
 dialog p {
     background-color: white;
     height: 300px;
