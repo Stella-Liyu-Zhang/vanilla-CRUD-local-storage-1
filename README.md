@@ -1,10 +1,9 @@
 ## Main structure of the Movie App:
 ![./imgs/structure.png](./imgs/structure.png)
 
-
-1) very first, we want to build a submit eventlistner,
-2) make a form validation
-3) 
+## UI of the movie app:
+![main page](./imgs/main%20page.png)
+![popup](./imgs/popup%20window.png)
 ## Browser API
 
 ### DOM API
